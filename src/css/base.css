@@ -17,13 +17,22 @@
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  min-width: 100vw;
-  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
   margin: 0;
+  color: #fbfbfb;
+  padding: 32px;
 }
-
+.test {
+  background-image: linear-gradient(to right, #f03f3b 50%, transparent 50%),
+    url('../img/background-img.jpg');
+  background-size: 100% 100%, 50% 100%;
+  background-position: left top, right top;
+  background-repeat: no-repeat;
+  width: 1376px;
+  height: 736px;
+  border-radius: 30px;
+}
 main {
   flex-grow: 1;
 }
