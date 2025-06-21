@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/nanny-services/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vanilla App Template</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" crossorigin src="/nanny-services/index.js"></script>
+    <link rel="modulepreload" crossorigin href="/nanny-services/assets/vendor-DRGBDZF_.js">
+    <link rel="stylesheet" crossorigin href="/nanny-services/assets/index-CJtdrHbc.css">
+  </head>
+  <body>
+    <div class="main-container">
+      <header class="header">
+  <div class="container-head">
+    <a href="/" class="logo">Nanny.Services</a>
+
+    <nav class="navigation">
+      <ul class="header-list">
+        <li>Home</li>
+        <li>Nannies</li>
+      </ul>
+
+      <ul class="header-list registration">
+        <li><button class="btn-login">Log In</button></li>
+        <li>
+          <button class="btn-register">Registartion</button>
+        </li>
+      </ul>
+      <ul class="header-list out">
+        <li class="header-user">
+          <div class="user-image">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12 4C13.0609 4 14.0783 4.42143 14.8284 5.17157C15.5786 5.92172 16 6.93913 16 8C16 9.06087 15.5786 10.0783 14.8284 10.8284C14.0783 11.5786 13.0609 12 12 12C10.9391 12 9.92172 11.5786 9.17157 10.8284C8.42143 10.0783 8 9.06087 8 8C8 6.93913 8.42143 5.92172 9.17157 5.17157C9.92172 4.42143 10.9391 4 12 4ZM12 14C16.42 14 20 15.79 20 18V20H4V18C4 15.79 7.58 14 12 14Z"
+                fill="#F03F3B"
+              />
+            </svg>
+          </div>
+          <div>
+            <p class="userName"></p>
+          </div>
+        </li>
+        <li><button type="button" class="btn-logout">Logout</button></li>
+      </ul>
+    </nav>
+
+    <!-- Modal window -->
+
+    <div class="backdrop">
+      <div class="modal">
+        <div class="registr">
+          <!-- <button class="btn-close-modal" data-type="register" type="button">
+            X
+          </button> -->
+          <div class="btn-close-modal" data-type="register">
+            <button class="svg-close">
+              <svg
+                class="svg-close"
+                width="32"
+                height="32"
+                viewBox="0 0 32 32"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M24 8L8 24"
+                  stroke="#11101C"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M8 8L24 24"
+                  stroke="#11101C"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="wrapp-registration">
+            <h2 class="title-registration">Registration</h2>
+            <p class="subtitle-registration">
+              Thank you for your interest in our platform! In order to register,
+              we need some information. Please provide us with the following
+              information.
+            </p>
+          </div>
+          <form class="form form-register">
+            <input
+              type="text"
+              class="input-modal"
+              placeholder="Name"
+              name="userName"
+            />
+            <input
+              type="email"
+              class="input-modal"
+              placeholder="Email"
+              name="email"
+            />
+            <div class="password-wrapper">
+              <input
+                type="password"
+                class="input-modal input-password"
+                id="password"
+                placeholder="Password"
+                name="password"
+              />
+              <button type="button" class="toggle-password">
+                <svg
+                  class="eye eye-open"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                >
+                  <path
+                    d="M14.9499 14.95C13.5254 16.0358 11.7908 16.6374 9.99992 16.6667C4.16659 16.6667 0.833252 10 0.833252 10C1.86983 8.06825 3.30753 6.38051 5.04992 5.05M8.24992 3.53333C8.82353 3.39907 9.41081 3.33195 9.99992 3.33333C15.8333 3.33333 19.1666 10 19.1666 10C18.6607 10.9463 18.0575 11.8373 17.3666 12.6583M11.7666 11.7667C11.5377 12.0123 11.2617 12.2093 10.955 12.3459C10.6484 12.4826 10.3173 12.556 9.98166 12.562C9.64599 12.5679 9.31256 12.5061 9.00126 12.3804C8.68997 12.2547 8.40719 12.0675 8.16979 11.8301C7.9324 11.5927 7.74525 11.31 7.61951 10.9987C7.49377 10.6874 7.43202 10.3539 7.43795 10.0183C7.44387 9.68258 7.51734 9.35154 7.65398 9.04487C7.79062 8.73821 7.98763 8.46221 8.23325 8.23333"
+                    stroke="#11101C"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M0.833252 0.833313L19.1666 19.1666"
+                    stroke="#11101C"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <svg
+                  class="eye eye-closed"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_31_2517)">
+                    <path
+                      d="M0.833313 10C0.833313 10 4.16665 3.33337 9.99998 3.33337C15.8333 3.33337 19.1666 10 19.1666 10C19.1666 10 15.8333 16.6667 9.99998 16.6667C4.16665 16.6667 0.833313 10 0.833313 10Z"
+                      stroke="#11101C"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M10 12.5C11.3807 12.5 12.5 11.3807 12.5 10C12.5 8.61929 11.3807 7.5 10 7.5C8.61929 7.5 7.5 8.61929 7.5 10C7.5 11.3807 8.61929 12.5 10 12.5Z"
+                      stroke="#11101C"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_31_2517">
+                      <rect width="20" height="20" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </button>
+            </div>
+
+            <button type="submit" class="btnSubmit">Sign Up</button>
+          </form>
+        </div>
+        <div class="login">
+          <div class="btn-close-modal" data-type="login">
+            <button class="svg-close">
+              <svg
+                width="32"
+                height="32"
+                viewBox="0 0 32 32"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M24 8L8 24"
+                  stroke="#11101C"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M8 8L24 24"
+                  stroke="#11101C"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="wrapp-registration">
+            <h2 class="title-registration">Login</h2>
+            <p class="subtitle-registration">
+              Thank you for your interest in our platform! In order to login, we
+              need some information. Please provide us with the following
+              information.
+            </p>
+          </div>
+          <form class="form form-login">
+            <!-- <input
+              type="text"
+              class="input-modal"
+              placeholder="Name"
+              name="userName"
+            /> -->
+            <input
+              type="email"
+              class="input-modal"
+              placeholder="Email"
+              name="email"
+            />
+            <div class="password-wrapper">
+              <input
+                type="password"
+                class="input-modal input-password"
+                placeholder="Password"
+                name="password"
+              />
+              <button type="button" class="toggle-password">
+                <svg
+                  class="eye eye-open"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                >
+                  <path
+                    d="M14.9499 14.95C13.5254 16.0358 11.7908 16.6374 9.99992 16.6667C4.16659 16.6667 0.833252 10 0.833252 10C1.86983 8.06825 3.30753 6.38051 5.04992 5.05M8.24992 3.53333C8.82353 3.39907 9.41081 3.33195 9.99992 3.33333C15.8333 3.33333 19.1666 10 19.1666 10C18.6607 10.9463 18.0575 11.8373 17.3666 12.6583M11.7666 11.7667C11.5377 12.0123 11.2617 12.2093 10.955 12.3459C10.6484 12.4826 10.3173 12.556 9.98166 12.562C9.64599 12.5679 9.31256 12.5061 9.00126 12.3804C8.68997 12.2547 8.40719 12.0675 8.16979 11.8301C7.9324 11.5927 7.74525 11.31 7.61951 10.9987C7.49377 10.6874 7.43202 10.3539 7.43795 10.0183C7.44387 9.68258 7.51734 9.35154 7.65398 9.04487C7.79062 8.73821 7.98763 8.46221 8.23325 8.23333"
+                    stroke="#11101C"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M0.833252 0.833313L19.1666 19.1666"
+                    stroke="#11101C"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <svg
+                  class="eye eye-closed"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_31_2517)">
+                    <path
+                      d="M0.833313 10C0.833313 10 4.16665 3.33337 9.99998 3.33337C15.8333 3.33337 19.1666 10 19.1666 10C19.1666 10 15.8333 16.6667 9.99998 16.6667C4.16665 16.6667 0.833313 10 0.833313 10Z"
+                      stroke="#11101C"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M10 12.5C11.3807 12.5 12.5 11.3807 12.5 10C12.5 8.61929 11.3807 7.5 10 7.5C8.61929 7.5 7.5 8.61929 7.5 10C7.5 11.3807 8.61929 12.5 10 12.5Z"
+                      stroke="#11101C"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_31_2517">
+                      <rect width="20" height="20" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </button>
+            </div>
+
+            <button type="submit" class="btnSubmit">Login</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <!-- icon-path="img/sprite.svg#logo"  -->
+      <main></main>
+    </div>
+
+  </body>
+</html>
