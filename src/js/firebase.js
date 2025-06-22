@@ -16,6 +16,7 @@ const firebaseConfig = {
   messagingSenderId: '549777202587',
   appId: '1:549777202587:web:a0bf6de0d554ec7cd3553e',
   measurementId: 'G-JWTN8C68MZ',
+  databaseURL: 'https://nanny-services-73a04-default-rtdb.firebaseio.com',
 };
 
 // Initialize Firebase

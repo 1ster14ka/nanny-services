@@ -25,6 +25,8 @@ body {
   padding: 32px;
 }
 .main-container {
+  display: flex;
+  flex-direction: column;
   margin: 0 auto;
   background-image: linear-gradient(to right, #f03f3b 50%, transparent 50%),
     url('../img/background-img.jpg');
@@ -35,9 +37,9 @@ body {
   height: 736px;
   border-radius: 30px;
 }
-main {
+/* main {
   flex-grow: 1;
-}
-main:has(.back-link) {
+} */
+/* main:has(.back-link) {
   text-align: center;
-}
+} */

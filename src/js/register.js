@@ -1,6 +1,11 @@
-import { createUserWithEmailAndPassword, updateProfile } from 'firebase/auth';
+import {
+  createUserWithEmailAndPassword,
+  reload,
+  updateProfile,
+} from 'firebase/auth';
 import { db, auth } from './firebase';
 import { ref, set } from 'firebase/database';
+import { updateUserUI } from './header';
 
 async function register(name, email, password) {
   try {
@@ -17,9 +22,11 @@ async function register(name, email, password) {
       email,
       uid: user.uid,
     });
-    await updateProfile(auth.currentUser, {
+    await updateProfile(user, {
       displayName: name,
     });
+    await user.reload();
+    updateUserUI(user);
   } catch (error) {
     const errorCode = error.code;
     const errorMessage = error.message;

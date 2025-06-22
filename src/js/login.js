@@ -1,5 +1,6 @@
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from './firebase';
+import { updateUserUI } from './header';
 
 async function login(email, password) {
   try {
@@ -10,9 +11,8 @@ async function login(email, password) {
     );
 
     const user = userCredential.user;
-    if (user) {
-      console.log('Welcome,', user.email);
-    }
+    await user.reload();
+    updateUserUI(user);
     console.log('Logged in:', user);
   } catch (error) {
     const errorCode = error.code;
